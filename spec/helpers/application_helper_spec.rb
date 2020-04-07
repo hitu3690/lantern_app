@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe ApplicationHelper, type: :helper do
+
   describe "#full_title" do
     context "page_title is empty" do
       it "removes symbol" do
