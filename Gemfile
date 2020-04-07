@@ -12,12 +12,15 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '3.1.12'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
 
 group :development, :test do
 	gem 'sqlite3'
 	gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+	gem 'rspec-rails'
 end
 
 group :development do
