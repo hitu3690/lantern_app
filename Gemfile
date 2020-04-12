@@ -17,12 +17,16 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'rails-i18n'
+gem 'faker'
+gem 'kaminari'
+gem 'kaminari-bootstrap'
 
 group :development, :test do
 	gem 'sqlite3'
 	gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 	gem 'rspec-rails'
 	gem "factory_bot_rails"
+	gem 'rails-controller-testing'
 end
 
 group :development do

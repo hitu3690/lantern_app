@@ -117,8 +117,15 @@ RSpec.describe User, type: :model do
   describe "User model methods" do
     describe "authenticated?" do
       it "return false for a user with nil digest" do
-        expect(user.authenticated?('')).to be_falsey
+        expect(user.authenticated?(:remember, '')).to be_falsey
       end
     end
   end
+  
+  describe "Dependent" do
+    it "destroys assosiated microposts" do
+      user.microposts.create!(memo: "Lorem Ipsum")
+      expect{ user.destroy }.to change{ Micropost.count }.by(-1)
+    end
+  end 
 end
